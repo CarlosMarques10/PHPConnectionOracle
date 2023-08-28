@@ -9,7 +9,7 @@ public static function getInstanceOracle() {
     if (!isset(self::$_pdoOracle)) {
         try {
             $tnsName = '(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = ...)(PORT = 1521))) (CONNECT_DATA = (SID = ...)))';
-            $username = 'EBAHIANA';
+            $username = '';
             $password = '';
             
             self::$_pdoOracle = new \PDO('oci:dbname=' . $tnsName, $username, $password);
